@@ -39,7 +39,16 @@ export default function HeroSection() {
       >
         <Typography 
           variant="subtitle2" 
-          sx={{ mb: 2, color: 'rgba(255,255,255,0.8)' }}
+          sx={{ 
+            mb: 2,
+            color: '#0195FF',
+            backgroundColor: '#C8E8FE',
+            borderRadius: '100px',
+            display: 'inline-block',
+            px: 3,
+            py: 1,
+            fontWeight: 500
+          }}
         >
           Business Growth Platform 🚀
         </Typography>
