@@ -45,7 +45,7 @@ const FAQ = () => {
     {
       id: 'panel5',
       question: "What sets your real estate agency apart from competitors?",
-      answer: "Our agency distinguishes itself through our in-depth local market knowledge, personalized approach to each client's unique needs, innovative marketing strategies, extensive professional network, and commitment to transparent communication throughout the entire process. Additionally, our agents undergo continuous education to stay ahead of market trends and technological advancements in the industry."
+      answer: "Our agency distinguishes itself through our in-depth local market knowledge, personalized approach to each client&apos;s unique needs, innovative marketing strategies, extensive professional network, and commitment to transparent communication throughout the entire process. Additionally, our agents undergo continuous education to stay ahead of market trends and technological advancements in the industry."
     },
   ];
 

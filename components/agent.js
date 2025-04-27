@@ -47,7 +47,7 @@ const RealEstateFeature = () => {
             Explore Our Exclusive <Box component="span" color="#3595ff">Real Estate</Box> Feature
           </Typography>
           <Typography variant="body1" color="text.secondary" mb={4}>
-            A Real Estate Feature Sheet Is A List Of Features And Updates For Your Seller's Home. 
+            A Real Estate Feature Sheet Is A List Of Features And Updates For Your Seller Home. 
             The Multiple Listing Services (MLS) Has A Lot Of Great Information Already Built In 
             But Having A Feature Sheet Can Help Your Sellers Showcase Their Home In A More Personal Way.
           </Typography>
