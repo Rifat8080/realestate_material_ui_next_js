@@ -37,12 +37,13 @@ export default function HeroSection() {
           zIndex: 1
         }}
       >
-        <Typography 
+    <Typography 
           variant="subtitle2" 
           sx={{ 
             mb: 2,
             color: '#0195FF',
-            backgroundColor: '#C8E8FE',
+            backgroundColor: '#E4F3FE',
+            border: '1px solid #C8E8FE',
             borderRadius: '100px',
             display: 'inline-block',
             px: 3,
@@ -56,15 +57,21 @@ export default function HeroSection() {
         <Typography 
           variant="h3" 
           component="h1" 
-          fontWeight="bold" 
-          sx={{ color: 'white' }}
+          sx={{ 
+            color: 'black',
+            fontFamily: 'Gilroy, sans-serif',
+            fontWeight: 400,
+            lineHeight: 1.3,
+            fontSize: { xs: '2.5rem', md: '3.5rem' },
+          }}
         >
-          Guaranteed <Box component="span" sx={{ color: '#F5BE30' }}>Real Estate</Box> Solutions
+          Guaranteed<br />
+          <Box component="span" sx={{ color: '#0195FF' }}>Real Estate</Box> Solutions
         </Typography>
         
         <Typography 
           variant="subtitle1" 
-          sx={{ mt: 2, mb: 5, color: 'rgba(255,255,255,0.85)' }}
+          sx={{ mt: 2, mb: 5, color: '#808080' }}
         >
           Need to sell your estate fast? Look no further. With our guaranteed quick sale option.
         </Typography>
