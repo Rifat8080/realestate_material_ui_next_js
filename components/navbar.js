@@ -239,12 +239,10 @@ export default function FloatingNavbar() {
               sx={{ 
                 '& .MuiTabs-flexContainer': {
                   justifyContent: 'center',
-                  gap: 4,
+                  gap: 2,
                 },
                 '& .MuiTab-root': {
                   minWidth: 0,
-                  px: 3,
-                  py: 0.75, // Add vertical padding
                   color: '#333333',
                   borderRadius: '30px', // Add border radius to all tabs
                   transition: 'all 0.2s ease',
