@@ -3,6 +3,7 @@ import   HeroSection from '@/components/hero';
 import FloatingNavbar from '@/components/navbar'; 
 import InfoCardsSection from '@/components/dev';
 import {RealEstateAssets, RealEstateFeature, RealEstateMarketing, RealEstateServices, RealEstateVideo} from '@/components/agent';
+import RewardsSection from '@/components/rewards';
 
 export default function Page() {
   return (
@@ -15,6 +16,7 @@ export default function Page() {
       <RealEstateAssets/>
       <RealEstateMarketing/>
       <RealEstateVideo/>
+      <RewardsSection />
     </>
   );
 }
