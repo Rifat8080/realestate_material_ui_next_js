@@ -103,10 +103,18 @@ export default function FloatingNavbar() {
       >
         <Toolbar className="flex items-center justify-between">
           {/* Left side button */}
-          <Button 
+                   <Button 
             variant="contained" 
-            color="primary"
-            className="rounded-md"
+            className="rounded-xl"
+            sx={{
+              background: '#F5BE30',
+              '&:hover': {
+                background: '#F5BE30',
+                opacity: 0.9,
+              },
+              borderRadius: '18px',
+              boxShadow: '0 4px 10px rgba(245, 190, 48, 0.3)',
+            }}
           >
             Logo
           </Button>
@@ -128,10 +136,36 @@ export default function FloatingNavbar() {
           
           {/* Right side buttons - hidden on mobile */}
           <div className="hidden lg:flex items-center space-x-4 gap-3.5">
-            <Button 
-              variant="outlined" 
-              color="primary"
+                       <Button 
+              variant="outlined"
               className="rounded-md"
+              sx={{
+                position: 'relative',
+                borderRadius: '18px',
+                border: 'none',
+                color: '#0F8CE9',
+                backgroundColor: 'transparent',
+                '&::before': {
+                  content: '""',
+                  position: 'absolute',
+                  inset: 0,
+                  borderRadius: '18px',
+                  padding: '2px',
+                  background: 'linear-gradient(to right, #0F8CE9, #66B3FB)',
+                  WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
+                  WebkitMaskComposite: 'xor',
+                  maskComposite: 'exclude',
+                  pointerEvents: 'none',
+                },
+                '&:hover': {
+                  border: 'none',
+                  backgroundColor: 'rgba(15, 140, 233, 0.08)',
+                  boxShadow: '0 4px 10px rgba(15, 140, 233, 0.2)',
+                  '&::before': {
+                    opacity: 0.8,
+                  }
+                }
+              }}
             >
               Login
             </Button>
@@ -145,7 +179,8 @@ export default function FloatingNavbar() {
               background: 'linear-gradient(to right, #0F8CE9, #66B3FB)',
               opacity: 0.9,
               boxShadow: '0 6px 12px rgba(15, 140, 233, 0.4)',
-            }
+            },
+            borderRadius: '18px',
           }}
         >
           Contact Us
