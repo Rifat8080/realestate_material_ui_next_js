@@ -5,6 +5,9 @@ import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import HomeIcon from '@mui/icons-material/Home';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import VerifiedUserIcon from '@mui/icons-material/VerifiedUser';
+import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
+import ApartmentIcon from '@mui/icons-material/Apartment';
+import SecurityIcon from '@mui/icons-material/Security';
 
 const features = [
   "Properties",
@@ -321,6 +324,168 @@ const RealEstateServices = () => {
     </Container>
   );
 };
-// Export both components
-export { RealEstateFeature, RealEstateServices };
+
+
+
+// Existing components here...
+
+// New Assets component with flipped layout
+const RealEstateAssets = () => {
+  return (
+    <Container maxWidth="xl" sx={{ mt: 8, mb: 8 }}>
+      {/* Section Title */}
+        {/* Section Title */}
+    <Typography 
+      variant="h4" 
+      component="h2" 
+      fontWeight="bold" 
+      textAlign="center" 
+      gutterBottom
+      sx={{ mb: 2 }} // Reduced bottom margin to accommodate description
+    >
+      Luxury <Box component="span" color="#3595ff">ASSETS</Box> 
+    </Typography>
+    
+    {/* Description */}
+    <Typography 
+      variant="body1" 
+      color="text.secondary" 
+      textAlign="center"
+      sx={{ 
+        mb: 5, 
+        maxWidth: '800px',
+        mx: 'auto'
+      }}
+    >
+        LUXURY ASSETS, PARTICULARLY IN THE REALM OF REAL ESTATE, REFER TO HIGH-END PROPERTIES THAT ARE VALUED FOR THEIR EXCLUSIVITY, LOCATION, DESIGN, AND AMENITIES.
+    </Typography>
+      
+      {/* Two-column layout - FLIPPED */}
+      <Box sx={{
+        display: 'flex',
+        flexDirection: { xs: 'column', md: 'row' },
+        alignItems: { xs: 'center', md: 'flex-start' },
+        gap: 4,
+        mx: '5%'
+      }}>
+        {/* Left column: Image (now first) */}
+        <Box sx={{
+          flex: 1,
+          height: { xs: '300px', md: '400px' },
+          position: 'relative',
+          borderRadius: 4,
+          overflow: 'hidden',
+          boxShadow: '0px 8px 24px rgba(0, 0, 0, 0.12)',
+          order: { xs: 1, md: 1 } // Ensure it stays first on mobile too
+        }}>
+          <Image
+            src="/car.png" 
+            alt="Luxury Real Estate Assets"
+            fill
+            style={{ 
+              objectFit: 'cover',
+              borderRadius: '16px'
+            }}
+          />
+        </Box>
+        
+        {/* Right column: Three icons with text in column (now second) */}
+        <Box sx={{
+          flex: 1,
+          display: 'flex',
+          flexDirection: 'column',
+          gap: 3,
+          order: { xs: 2, md: 2 }
+        }}>
+          {/* First item: Money icon */}
+          <Box sx={{
+            display: 'flex',
+            alignItems: 'center', 
+            gap: 2,
+          }}>
+            <Box sx={{
+              background: 'white',
+              color: 'black',
+              width: 50,
+              height: 50,
+              borderRadius: '30%',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              boxShadow: '0px 4px 15px rgba(0, 0, 0, 0.15)',
+              flexShrink: 0
+            }}>
+              <AttachMoneyIcon sx={{ fontSize: 25 }} />
+            </Box>
+            
+            <Box>
+              <Typography variant="subtitle1" fontWeight="bold" gutterBottom>
+              YACHTS
+              </Typography>
+              <Typography variant="body2" color="text.secondary">
+              THE INTERSECTION OF REAL ESTATE AND YACHTS! YOU’VE GOT A UNIQUE INTEREST THERE. LUXURY REAL ESTATE CAN INDEED INVOLVE PROPERTIES WITH DIRECT ACCESS TO MARINAS, WATERFRONTS, OR EVEN PRIVATE YACHT MOORING FACILITIES.              </Typography>
+            </Box>
+          </Box>
+          
+          {/* Second item: Apartment icon */}
+          <Box sx={{
+            display: 'flex',
+            alignItems: 'center', 
+            gap: 2,
+          }}>
+            <Box sx={{
+              background: 'white',
+              color: 'black',
+              width: 50,
+              height: 50,
+              borderRadius: '30%',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              boxShadow: '0px 4px 15px rgba(0, 0, 0, 0.15)',
+              flexShrink: 0
+            }}>
+              <ApartmentIcon sx={{ fontSize: 25 }} />
+            </Box>
+            
+            <Box>
+              <Typography variant="subtitle1" fontWeight="bold" gutterBottom>
+              CARS              </Typography>
+              <Typography variant="body2" color="text.secondary">
+              LUXURY CARS REFER TO HIGH-END VEHICLES THAT OFFER SUPERIOR PERFORMANCE, AESTHETICS, AND AMENITIES. THESE CARS ARE TYPICALLY MANUFACTURED BY PRESTIGIOUS BRANDS SUCH AS MERCEDES-BENZ, AUDI, AND ARE KNOWN FOR THEIR UNIQUE FEATURES, COMFORT, AND STYLE.              </Typography>
+            </Box>
+          </Box>
+          
+          
+          <Button 
+            variant="contained" 
+            disableElevation
+            sx={{ 
+              mt: 2, 
+              ml: { xs: 0, sm: 8 },
+              alignSelf: 'flex-start',
+              background: 'linear-gradient(to right, #0F8CE9, #66B3FB)',
+              color: 'white',
+              boxShadow: '0px 4px 8px rgba(15, 140, 233, 0.3)',
+              borderRadius: '25px',
+              px: 3,
+              py: 1,
+              fontWeight: 'medium',
+              border: 'none',
+              '&:hover': {
+                background: 'linear-gradient(to right, #0c7dcf, #5ba1f8)',
+                boxShadow: '0px 6px 10px rgba(15, 140, 233, 0.4)',
+              }
+            }}
+          >
+            Explose More
+          </Button>
+        </Box>
+      </Box>
+    </Container>
+  );
+};
+
+// Export all components
+export { RealEstateFeature, RealEstateServices, RealEstateAssets };
 export default RealEstateFeature;
