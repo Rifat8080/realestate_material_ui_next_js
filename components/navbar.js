@@ -217,7 +217,6 @@ export default function FloatingNavbar() {
           <YellowButton>
             Logo
           </YellowButton>
-                    /* Center tabs - hidden on mobile */
           <Box 
             sx={{ 
               display: { xs: 'none', [BREAKPOINT]: 'flex' }, 
@@ -230,21 +229,33 @@ export default function FloatingNavbar() {
               zIndex: 0
             }}
           >
-            <Tabs 
+                        <Tabs 
               value={tabValue} 
               onChange={handleTabChange}
-              textColor="primary"
+              textColor="inherit"
               indicatorColor="primary"
               centered
               variant="standard"
               sx={{ 
                 '& .MuiTabs-flexContainer': {
                   justifyContent: 'center',
-                  gap: 4,  // Add more space between tabs
+                  gap: 4,
                 },
                 '& .MuiTab-root': {
-                  minWidth: 0,  // Allow tabs to be more compact
-                  px: 2,  // Add padding to the tabs
+                  minWidth: 0,
+                  px: 3,
+                  py: 0.75, // Add vertical padding
+                  color: '#333333',
+                  borderRadius: '30px', // Add border radius to all tabs
+                  transition: 'all 0.2s ease',
+                  '&.Mui-selected': {
+                    color: '#0195FF',
+                    fontWeight: 500,
+                    backgroundColor: '#E4F3FE', // Light blue background for active tab
+                  }
+                },
+                '& .MuiTabs-indicator': {
+                  display: 'none', // Hide the default bottom indicator completely
                 }
               }}
             >
@@ -252,7 +263,6 @@ export default function FloatingNavbar() {
                 <Tab 
                   key={item} 
                   label={item} 
-                  className="text-gray-800"
                   sx={{ fontSize: '1rem' }}
                 />
               ))}
