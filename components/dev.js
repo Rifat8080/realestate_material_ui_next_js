@@ -1,26 +1,54 @@
 import React from 'react';
 import { Box, Card, CardContent, Typography, Button, Stack } from '@mui/material';
 import { Apple, Android } from '@mui/icons-material';
+import Image from 'next/image'; // Add this import for the image
 
 const InfoCardsSection = () => {
   return (
-            <Box
-          sx={{
-            backgroundColor: '#e6f4ff',
-            pt: 4, // Change to 40% top padding
-            px: 4,     // Keep horizontal padding
-            pb: 4,     // Keep bottom padding
-            borderRadius: 4,
-            textAlign: 'center',
-            width: '80%',
-            height: '50vh',
-            mt: '25%',
-            mx: 'auto', // Add this to center horizontally
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
+    <Box
+      sx={{
+        position: 'relative', // Add this to enable absolute positioning for the floating image
+        backgroundColor: '#e6f4ff',
+        pt: 4,
+        px: 4,     
+        pb: 4,     
+        borderRadius: 4,
+        textAlign: 'center',
+        width: '80%',
+        height: '50vh',
+        mt: '25%',
+        mx: 'auto',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+      }}
+    >
+      {/* Floating image */}
+      <Box
+        sx={{
+          position: 'absolute',
+          top: '-2px',
+          left: '50%',
+          transform: 'translateX(-50%)',
+          zIndex: 2,
+          animation: 'floatTop 6s ease-in-out infinite',
+          '@keyframes floatTop': {
+            '0%, 100%': { transform: 'translateX(-50%) translateY(0)' },
+            '50%': { transform: 'translateX(-50%) translateY(-15px)' },
+          }
+        }}
+      >
+        <Image 
+          src="/Vectorpoint.png" 
+          alt="Chart Icon" 
+          width={40} 
+          height={40}
+          style={{ 
+            filter: 'drop-shadow(0px 5px 15px rgba(15, 140, 233, 0.3))'
           }}
-        >
+        />
+      </Box>
+      
       <Stack
         direction={{ xs: 'column', md: 'row' }}
         spacing={4}
@@ -28,6 +56,7 @@ const InfoCardsSection = () => {
         alignItems="center"
         mb={4}
       >
+        {/* Rest of your existing code... */}
        
                <Card sx={{ borderRadius: 3, maxWidth: 400, p: 2 }}>
           <CardContent sx={{ textAlign: 'left' }}>
