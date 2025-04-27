@@ -268,7 +268,7 @@ export default function FloatingNavbar() {
           </Box>
           
           {/* Right side buttons - hidden on mobile */}
-                   // Fix the right side buttons section
+                   
           <Box 
             sx={{ 
               display: { xs: 'none', [BREAKPOINT]: 'flex' },
