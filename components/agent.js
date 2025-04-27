@@ -325,10 +325,6 @@ const RealEstateServices = () => {
   );
 };
 
-
-
-// Existing components here...
-
 // New Assets component with flipped layout
 const RealEstateAssets = () => {
   return (
@@ -650,6 +646,133 @@ const RealEstateMarketing = () => {
   );
 };
 
-export { RealEstateFeature, RealEstateServices, RealEstateAssets, RealEstateMarketing };
+
+// New Assets component with flipped layout
+const RealEstateVideo = () => {
+    return (
+      <Container maxWidth="xl" sx={{ mt: 8, mb: 8 }}>
+        {/* Section Title */}
+          {/* Section Title */}
+      <Typography 
+        variant="h4" 
+        component="h2" 
+        fontWeight="bold" 
+        textAlign="center" 
+        gutterBottom
+        sx={{ mb: 2 }} // Reduced bottom margin to accommodate description
+      >
+        Our <Box component="span" color="#3595ff">Certification</Box> Course
+      </Typography>
+      
+      {/* Description */}
+      <Typography 
+        variant="body1" 
+        color="text.secondary" 
+        textAlign="center"
+        sx={{ 
+          mb: 5, 
+          maxWidth: '800px',
+          mx: 'auto'
+        }}
+      >
+Our Certification Course is designed to equip individuals with the necessary skills and knowledge to excel in their chosen field.      </Typography>
+        
+        {/* Two-column layout - FLIPPED */}
+        <Box sx={{
+          display: 'flex',
+          flexDirection: { xs: 'column', md: 'row' },
+          alignItems: { xs: 'center', md: 'flex-start' },
+          gap: 4,
+          mx: '5%'
+        }}>
+          {/* Left column: Image (now first) */}
+          <Box sx={{
+            flex: 1,
+            height: { xs: '300px', md: '400px' },
+            position: 'relative',
+            borderRadius: 4,
+            overflow: 'visible',
+            boxShadow: '0px 8px 24px rgba(0, 0, 0, 0.12)',
+            order: { xs: 1, md: 1 } // Ensure it stays first on mobile too
+          }}>
+            <Image
+              src="/video.png" 
+              alt="Luxury Real Estate Assets"
+              fill
+              style={{ 
+                objectFit: 'cover',
+                borderRadius: '16px'
+              }}
+            />
+          </Box>
+          
+          {/* Right column: Three icons with text in column (now second) */}
+          <Box sx={{
+            flex: 1,
+            display: 'flex',
+            flexDirection: 'column',
+            gap: 3,
+            order: { xs: 2, md: 2 }
+          }}>
+          
+          {/* First item: Yacht icon */}
+          <Box sx={{
+            display: 'flex',
+            alignItems: 'center', 
+            gap: 2,
+          }}>
+            
+            <Box>
+              <Typography variant="body2" color="text.secondary">
+              Our Certification Course is designed to equip individuals with the necessary skills and knowledge to excel in their chosen field. The course is comprehensive and covers a wide range of topics, from foundational concepts to advanced techniques.
+
+The course is ideal for those looking to upskill, reskill, or transition into a new career. With our Certification Course, you'll gain a competitive edge in the job market and open up new opportunities for personal and professional growth.                </Typography>
+            </Box>
+          </Box>
+          
+          {/* Second item: Car icon */}
+          <Box sx={{
+            display: 'flex',
+            alignItems: 'center', 
+            gap: 2,
+          }}>
+            
+            <Box>
+              <Typography variant="body2" color="text.secondary">
+                LUXURY CARS REFER TO HIGH-END VEHICLES THAT OFFER SUPERIOR PERFORMANCE, AESTHETICS, AND AMENITIES. THESE CARS ARE TYPICALLY MANUFACTURED BY PRESTIGIOUS BRANDS SUCH AS MERCEDES-BENZ, AUDI, AND ARE KNOWN FOR THEIR UNIQUE FEATURES, COMFORT, AND STYLE.
+              </Typography>
+            </Box>
+          </Box>
+
+            <Button 
+              variant="contained" 
+              disableElevation
+              sx={{ 
+                mt: 2, 
+                ml: 0, // Removed offset margin to align with text
+                alignSelf: 'flex-start',
+                background: 'linear-gradient(to right, #0F8CE9, #66B3FB)',
+                color: 'white',
+                boxShadow: '0px 4px 8px rgba(15, 140, 233, 0.3)',
+                borderRadius: '25px',
+                px: 3,
+                py: 1,
+                fontWeight: 'medium',
+                border: 'none',
+                '&:hover': {
+                  background: 'linear-gradient(to right, #0c7dcf, #5ba1f8)',
+                  boxShadow: '0px 6px 10px rgba(15, 140, 233, 0.4)',
+                }
+              }}
+            >
+              Explore More
+            </Button>
+          </Box>
+        </Box>
+      </Container>
+    );
+  };
+
+export { RealEstateFeature, RealEstateServices, RealEstateAssets, RealEstateMarketing, RealEstateVideo };
 export default RealEstateFeature;
 
