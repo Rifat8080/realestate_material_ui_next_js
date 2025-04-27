@@ -71,7 +71,7 @@ const styles = {
 
 // ===== REUSABLE COMPONENTS =====
 // Update the GradientButton component
-const GradientButton = ({ children, className = "", ...props }) => (
+ export const GradientButton = ({ children, className = "", ...props }) => (
   <Button
     variant="contained"
     className={`rounded-md ${className}`}
