@@ -112,7 +112,7 @@ export default function FloatingNavbar() {
           </Button>
           
           {/* Center tabs - hidden on mobile */}
-          <Box className="hidden md:flex flex-grow justify-center">
+          <Box className="hidden lg:flex flex-grow justify-center">
             <Tabs 
               value={tabValue} 
               onChange={handleTabChange}
@@ -127,7 +127,7 @@ export default function FloatingNavbar() {
           </Box>
           
           {/* Right side buttons - hidden on mobile */}
-          <div className="hidden md:flex items-center space-x-4 gap-3.5">
+          <div className="hidden lg:flex items-center space-x-4 gap-3.5">
             <Button 
               variant="outlined" 
               color="primary"
@@ -158,7 +158,7 @@ export default function FloatingNavbar() {
   aria-label="open drawer"
   edge="start"
   onClick={handleDrawerToggle}
-  sx={{ display: { xs: 'flex', sm: 'none' }, ml: 'auto' }}
+  sx={{ display: { xs: 'flex', md: 'none' }, ml: 'auto' }}
 >
   <MenuIcon />
 </IconButton>
@@ -183,7 +183,7 @@ export default function FloatingNavbar() {
       mt: '70px',
       borderRadius: '8px 0 0 8px',
     },
-    display: { xs: 'block', sm: 'none' },
+    display: { xs: 'block', md: 'none' },
   }}
 >
   {drawer}
