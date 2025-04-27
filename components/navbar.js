@@ -203,15 +203,19 @@ export default function FloatingNavbar() {
 
   return (
     <div className="fixed top-4 left-0 right-0 z-50 px-4">
-      <AppBar 
-        position="static" 
-        elevation={0}
-        className={`
-          backdrop-blur-md rounded-lg max-w-7xl mx-auto transition-all duration-300
-          ${trigger ? 'shadow-md' : 'shadow-sm'}
-        `}
-        style={{ background: 'transparent' }}
-      >
+        <AppBar 
+            position="static" 
+            elevation={0}
+            className={`
+              rounded-lg max-w-7xl mx-auto transition-all duration-300
+              ${trigger ? 'shadow-md' : 'shadow-sm'}
+            `}
+            sx={{
+              background: 'transparent',
+              backdropFilter: 'none', // Remove blur effect from all breakpoints
+              backgroundColor: 'transparent', // Make background transparent for all breakpoints
+            }}
+          >
         <Toolbar className="flex items-center justify-between">
           {/* Left side button */}
           <YellowButton>
@@ -268,7 +272,6 @@ export default function FloatingNavbar() {
           </Box>
           
           {/* Right side buttons - hidden on mobile */}
-                   
           <Box 
             sx={{ 
               display: { xs: 'none', [BREAKPOINT]: 'flex' },
