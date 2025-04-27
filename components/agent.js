@@ -8,6 +8,8 @@ import VerifiedUserIcon from '@mui/icons-material/VerifiedUser';
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import ApartmentIcon from '@mui/icons-material/Apartment';
 import SecurityIcon from '@mui/icons-material/Security';
+import DirectionsBoatIcon from '@mui/icons-material/DirectionsBoat'; // Add yacht icon
+import DirectionsCarIcon from '@mui/icons-material/DirectionsCar'; // Add car icon
 
 const features = [
   "Properties",
@@ -343,7 +345,7 @@ const RealEstateAssets = () => {
       gutterBottom
       sx={{ mb: 2 }} // Reduced bottom margin to accommodate description
     >
-      Luxury <Box component="span" color="#3595ff">ASSETS</Box> 
+      Luxury <Box component="span" color="#3595ff">Assets</Box> 
     </Typography>
     
     {/* Description */}
@@ -397,64 +399,68 @@ const RealEstateAssets = () => {
           gap: 3,
           order: { xs: 2, md: 2 }
         }}>
-          {/* First item: Money icon */}
+        
+        {/* First item: Yacht icon */}
+        <Box sx={{
+          display: 'flex',
+          alignItems: 'center', 
+          gap: 2,
+        }}>
           <Box sx={{
+            background: 'white',
+            color: 'black',
+            width: 50,
+            height: 50,
+            borderRadius: '30%',
             display: 'flex',
-            alignItems: 'center', 
-            gap: 2,
+            alignItems: 'center',
+            justifyContent: 'center',
+            boxShadow: '0px 4px 15px rgba(0, 0, 0, 0.15)',
+            flexShrink: 0
           }}>
-            <Box sx={{
-              background: 'white',
-              color: 'black',
-              width: 50,
-              height: 50,
-              borderRadius: '30%',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              boxShadow: '0px 4px 15px rgba(0, 0, 0, 0.15)',
-              flexShrink: 0
-            }}>
-              <AttachMoneyIcon sx={{ fontSize: 25 }} />
-            </Box>
-            
-            <Box>
-              <Typography variant="subtitle1" fontWeight="bold" gutterBottom>
-              YACHTS
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-              THE INTERSECTION OF REAL ESTATE AND YACHTS! YOU’VE GOT A UNIQUE INTEREST THERE. LUXURY REAL ESTATE CAN INDEED INVOLVE PROPERTIES WITH DIRECT ACCESS TO MARINAS, WATERFRONTS, OR EVEN PRIVATE YACHT MOORING FACILITIES.              </Typography>
-            </Box>
+            <DirectionsBoatIcon sx={{ fontSize: 25 }} /> {/* Changed from AttachMoneyIcon */}
           </Box>
           
-          {/* Second item: Apartment icon */}
-          <Box sx={{
-            display: 'flex',
-            alignItems: 'center', 
-            gap: 2,
-          }}>
-            <Box sx={{
-              background: 'white',
-              color: 'black',
-              width: 50,
-              height: 50,
-              borderRadius: '30%',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              boxShadow: '0px 4px 15px rgba(0, 0, 0, 0.15)',
-              flexShrink: 0
-            }}>
-              <ApartmentIcon sx={{ fontSize: 25 }} />
-            </Box>
-            
-            <Box>
-              <Typography variant="subtitle1" fontWeight="bold" gutterBottom>
-              CARS              </Typography>
-              <Typography variant="body2" color="text.secondary">
-              LUXURY CARS REFER TO HIGH-END VEHICLES THAT OFFER SUPERIOR PERFORMANCE, AESTHETICS, AND AMENITIES. THESE CARS ARE TYPICALLY MANUFACTURED BY PRESTIGIOUS BRANDS SUCH AS MERCEDES-BENZ, AUDI, AND ARE KNOWN FOR THEIR UNIQUE FEATURES, COMFORT, AND STYLE.              </Typography>
-            </Box>
+          <Box>
+            <Typography variant="subtitle1" fontWeight="bold" gutterBottom>
+              YACHTS
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+              THE INTERSECTION OF REAL ESTATE AND YACHTS! YOU'VE GOT A UNIQUE INTEREST THERE. LUXURY REAL ESTATE CAN INDEED INVOLVE PROPERTIES WITH DIRECT ACCESS TO MARINAS, WATERFRONTS, OR EVEN PRIVATE YACHT MOORING FACILITIES.
+            </Typography>
           </Box>
+        </Box>
+        
+        {/* Second item: Car icon */}
+        <Box sx={{
+          display: 'flex',
+          alignItems: 'center', 
+          gap: 2,
+        }}>
+          <Box sx={{
+            background: 'white',
+            color: 'black',
+            width: 50,
+            height: 50,
+            borderRadius: '30%',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            boxShadow: '0px 4px 15px rgba(0, 0, 0, 0.15)',
+            flexShrink: 0
+          }}>
+            <DirectionsCarIcon sx={{ fontSize: 25 }} /> {/* Changed from ApartmentIcon */}
+          </Box>
+          
+          <Box>
+            <Typography variant="subtitle1" fontWeight="bold" gutterBottom>
+              CARS
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+              LUXURY CARS REFER TO HIGH-END VEHICLES THAT OFFER SUPERIOR PERFORMANCE, AESTHETICS, AND AMENITIES. THESE CARS ARE TYPICALLY MANUFACTURED BY PRESTIGIOUS BRANDS SUCH AS MERCEDES-BENZ, AUDI, AND ARE KNOWN FOR THEIR UNIQUE FEATURES, COMFORT, AND STYLE.
+            </Typography>
+          </Box>
+        </Box>
           
           
           <Button 
