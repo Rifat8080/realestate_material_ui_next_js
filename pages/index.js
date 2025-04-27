@@ -5,6 +5,7 @@ import InfoCardsSection from '@/components/dev';
 import {RealEstateAssets, RealEstateFeature, RealEstateMarketing, RealEstateServices, RealEstateVideo} from '@/components/agent';
 import RewardsSection from '@/components/rewards';
 import FAQ from '@/components/faq'; 
+import Footer from '@/components/footer';
 
 export default function Page() {
   return (
@@ -19,6 +20,7 @@ export default function Page() {
       <RealEstateVideo/>
       <RewardsSection />
       <FAQ/>
+      <Footer/>
     </>
   );
 }
