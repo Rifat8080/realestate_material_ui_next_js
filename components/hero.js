@@ -4,14 +4,15 @@ import Image from 'next/image';
 
 export default function HeroSection() {
   return (
-    <Box
+       <Box
       sx={{
         background: 'linear-gradient(to bottom, rgba(15, 140, 233, 0.05), rgba(55, 158, 253, 0.3))',
         minHeight: '90vh',
         display: 'flex',
         alignItems: 'center',
         position: 'relative',
-        overflow: 'hidden',
+        overflow: 'visible', // Changed from 'hidden' to 'visible'
+        zIndex: 0,
         paddingY: { xs: 8, md: 0 },
       }}
     >
@@ -121,8 +122,9 @@ export default function HeroSection() {
           <Box
             sx={{
               position: 'absolute',
-              right: { xs: '-60px', md: '-80px' },
-              top: '50%',
+              right: { xs: '-60px', md: '-120px' },
+              top: '120%',
+              zIndex: 0,
               transform: 'translateY(-50%)',
               animation: 'floatRight 5s ease-in-out infinite',
               '@keyframes floatRight': {
@@ -134,12 +136,35 @@ export default function HeroSection() {
             <Image 
               src="/Group.png" 
               alt="Key Icon" 
-              width={60} 
-              height={60}
+              width={90} 
+              height={90}
             />
           </Box>
         </Box>
       </Container>
+      
+          {/* New floating image outside container that overflows the component */}
+    <Box
+      sx={{
+        position: 'absolute',
+        right: { xs: '10%', md: '12%' },
+        bottom: { xs: '-30%', md: '-28%' }, // Pushed much further down
+        zIndex: -1,       // Higher z-index to ensure it appears above the next section
+        filter: 'drop-shadow(0px 10px 30px rgba(15, 140, 233, 0.2))', // Optional: add shadow for depth
+      }}
+    >
+      <Image 
+        src="/dashFrame.png" 
+        alt="Building Icon" 
+        width={1200} 
+        height={900}
+        style={{ 
+          maxWidth: '100%',
+          height: 'auto',
+        }}
+        priority // Makes image load with higher priority
+      />
+    </Box>
     </Box>
   );
 }
