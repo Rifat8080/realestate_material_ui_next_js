@@ -1,6 +1,10 @@
 import React from 'react';
-import { Box, Typography, Grid, Paper, Button, Chip, Container } from '@mui/material';
-import Image from 'next/image'; // Add this import for the image
+import { Box, Typography, Grid, Paper, Button, Chip, Container, Stack } from '@mui/material';
+import Image from 'next/image';
+import AccessTimeIcon from '@mui/icons-material/AccessTime';
+import HomeIcon from '@mui/icons-material/Home';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import VerifiedUserIcon from '@mui/icons-material/VerifiedUser';
 
 const features = [
   "Properties",
@@ -144,4 +148,179 @@ const RealEstateFeature = () => {
   );
 };
 
+
+
+// Rest of your imports and features array...
+
+const RealEstateServices = () => {
+  return (
+    <Container maxWidth="xl" sx={{ mt: 8, mb: 8 }}>
+      {/* Section Title */}
+      <Typography 
+        variant="h4" 
+        component="h2" 
+        fontWeight="bold" 
+        textAlign="center" 
+        gutterBottom
+        sx={{ mb: 5 }}
+      >
+        DISCOVER THE <br></br>PERFECT <Box component="span" color="#3595ff">PROPERTIES</Box> WITH EASE
+      </Typography>
+      
+      {/* Two-column layout */}
+      <Box sx={{
+        display: 'flex',
+        flexDirection: { xs: 'column', md: 'row' },
+        alignItems: { xs: 'center', md: 'flex-start' },
+        gap: 4,
+        mx: '5%'
+      }}>
+        {/* Left column: Three icons with text in column */}
+        <Box sx={{
+          flex: 1,
+          display: 'flex',
+          flexDirection: 'column',
+          gap: 3
+        }}>
+          {/* First item: Clock icon */}
+          <Box sx={{
+            display: 'flex',
+            alignItems: 'center', 
+            gap: 2,
+          }}>
+            <Box sx={{
+              background: 'white',
+              color: 'black',
+              width: 50,
+              height: 50,
+              borderRadius: '30%',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              boxShadow: '0px 4px 15px rgba(0, 0, 0, 0.15)',
+              flexShrink: 0
+            }}>
+              <AccessTimeIcon sx={{ fontSize: 25 }} />
+            </Box>
+            
+            <Box>
+              <Typography variant="subtitle1" fontWeight="bold" gutterBottom>
+                Ready to Move In
+              </Typography>
+              <Typography variant="body2" color="text.secondary">
+                Properties that are immediately available for occupancy with all necessary amenities.
+              </Typography>
+            </Box>
+          </Box>
+          
+          {/* Second item: Home icon */}
+          <Box sx={{
+            display: 'flex',
+            alignItems: 'center', 
+            gap: 2,
+          }}>
+            <Box sx={{
+              background: 'white',
+              color: 'black',
+              width: 50,
+              height: 50,
+              borderRadius: '30%',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              boxShadow: '0px 4px 15px rgba(0, 0, 0, 0.15)',
+              flexShrink: 0
+            }}>
+              <HomeIcon sx={{ fontSize: 25 }} />
+            </Box>
+            
+            <Box>
+              <Typography variant="subtitle1" fontWeight="bold" gutterBottom>
+              OFF-PLAN PROPERTIES
+              </Typography>
+              <Typography variant="body2" color="text.secondary">
+              OFF-PLAN PROPERTIES REFER TO REAL ESTATE UNITS THAT ARE BEING CONSTRUCTED OR DEVELOPED, BUT HAVE NOT YET BEEN COMPLETED OR OCCUPIED.              </Typography>
+            </Box>
+          </Box>
+          
+          {/* Third item: Location icon */}
+          <Box sx={{
+            display: 'flex',
+            alignItems: 'center', 
+            gap: 2,
+          }}>
+            <Box sx={{
+              background: 'white',
+              color: 'black',
+              width: 50,
+              height: 50,
+              borderRadius: '30%',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              boxShadow: '0px 4px 15px rgba(0, 0, 0, 0.15)',
+              flexShrink: 0
+            }}>
+              <VerifiedUserIcon sx={{ fontSize: 25 }} />
+            </Box>
+            
+            <Box>
+              <Typography variant="subtitle1" fontWeight="bold" gutterBottom>
+              SECONDARY MARKET              </Typography>
+              <Typography variant="body2" color="text.secondary">
+              THE SECONDARY MARKET IN REAL ESTATE REFERS TO THE EXISTING POOL OF HOMES, COMMERCIAL PROPERTIES, AND OTHER TYPES OF PROPERTIES THAT ARE ALREADY BUILT AND OCCUPIED.              </Typography>
+           
+            </Box>
+            
+          </Box>
+                         <Button 
+              variant="contained" 
+              disableElevation
+              sx={{ 
+                mt: 2, 
+                ml: { xs: 0, sm: 8 },
+                alignSelf: 'flex-start',
+                background: 'linear-gradient(to right, #0F8CE9, #66B3FB)',
+                color: 'white',
+                boxShadow: '0px 4px 8px rgba(15, 140, 233, 0.3)',
+                borderRadius: '25px',
+                px: 3,
+                py: 1,
+                fontWeight: 'medium',
+                border: 'none',
+                '&:hover': {
+                  background: 'linear-gradient(to right, #0c7dcf, #5ba1f8)',
+                  boxShadow: '0px 6px 10px rgba(15, 140, 233, 0.4)',
+                }
+              }}
+            >
+              View All Features
+            </Button>
+        </Box>
+        
+        {/* Right column: Image (unchanged) */}
+        <Box sx={{
+          flex: 1,
+          height: { xs: '300px', md: '400px' },
+          position: 'relative',
+          borderRadius: 4,
+          overflow: 'hidden',
+          boxShadow: '0px 8px 24px rgba(0, 0, 0, 0.12)'
+        }}>
+          <Image
+            src="/building.png" 
+            alt="Property Management"
+            fill
+            style={{ 
+              objectFit: 'cover',
+              borderRadius: '16px'
+            }}
+          />
+        </Box>
+      </Box>
+    </Container>
+  );
+};
+// Export both components
+export { RealEstateFeature, RealEstateServices };
 export default RealEstateFeature;
