@@ -2,7 +2,7 @@
 import   HeroSection from '@/components/hero';
 import FloatingNavbar from '@/components/navbar'; 
 import InfoCardsSection from '@/components/dev';
-import {RealEstateAssets, RealEstateFeature, RealEstateServices} from '@/components/agent';
+import {RealEstateAssets, RealEstateFeature, RealEstateMarketing, RealEstateServices} from '@/components/agent';
 
 export default function Page() {
   return (
@@ -13,6 +13,7 @@ export default function Page() {
       <RealEstateFeature />
       <RealEstateServices />
       <RealEstateAssets/>
+      <RealEstateMarketing/>
     </>
   );
 }
