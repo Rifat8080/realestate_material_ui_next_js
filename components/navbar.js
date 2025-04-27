@@ -217,15 +217,17 @@ export default function FloatingNavbar() {
           <YellowButton>
             Logo
           </YellowButton>
-          
-                   /* Center tabs - hidden on mobile */
+                    /* Center tabs - hidden on mobile */
           <Box 
             sx={{ 
               display: { xs: 'none', [BREAKPOINT]: 'flex' }, 
-              flexGrow: 1, 
+              position: 'absolute',  // This is the key change
+              left: 0,
+              right: 0,
+              margin: '0 auto',
               justifyContent: 'center',
               alignItems: 'center',
-              width: '100%'
+              zIndex: 0
             }}
           >
             <Tabs 
@@ -238,8 +240,12 @@ export default function FloatingNavbar() {
               sx={{ 
                 '& .MuiTabs-flexContainer': {
                   justifyContent: 'center',
+                  gap: 4,  // Add more space between tabs
                 },
-                width: { [BREAKPOINT]: '60%', lg: '50%' }
+                '& .MuiTab-root': {
+                  minWidth: 0,  // Allow tabs to be more compact
+                  px: 2,  // Add padding to the tabs
+                }
               }}
             >
               {navItems.map((item, index) => (
