@@ -94,6 +94,32 @@ const InfoCardsSection = () => {
             </Typography>
           </CardContent>
         </Card>
+
+                {/* Floating image below Card 1 */}
+        <Box
+          sx={{
+            position: 'absolute',
+            bottom: '15%',
+            left: '25%',
+            zIndex: 2,
+            animation: 'floatBottom 7s ease-in-out infinite',
+            '@keyframes floatBottom': {
+              '0%, 100%': { transform: 'rotate(-5deg) translateY(0)' },
+              '50%': { transform: 'rotate(5deg) translateY(-10px)' },
+            }
+          }}
+        >
+          <Image 
+            src="/Vectorg.png" 
+            alt="House Icon" 
+            width={50} 
+            height={50}
+            style={{ 
+              opacity: 0.7,
+              filter: 'drop-shadow(0px 5px 15px rgba(15, 140, 233, 0.3))'
+            }}
+          />
+        </Box>
         
         {/* Card 2 */}
         <Card sx={{ borderRadius: 3, maxWidth: 400, p: 2 }}>
@@ -141,36 +167,60 @@ const InfoCardsSection = () => {
         justifyContent="center"
         alignItems="center"
       >
-        <Button
-          variant="contained"
-          startIcon={<Apple />}
-          sx={{
-            borderRadius: '50px',
-            backgroundColor: 'black',
-            px: 3,
-            py: 1,
-            '&:hover': {
-              backgroundColor: '#333',
-            },
-          }}
+                {/* Store Buttons */}
+        <Stack
+          direction="row"
+          spacing={3}
+          justifyContent="center"
+          alignItems="center"
         >
-          App Store
-        </Button>
-        <Button
-          variant="contained"
-          startIcon={<Android />}
-          sx={{
-            borderRadius: '50px',
-            backgroundColor: 'black',
-            px: 3,
-            py: 1,
-            '&:hover': {
-              backgroundColor: '#333',
-            },
-          }}
-        >
-          Google Play
-        </Button>
+          <Button
+            variant="contained"
+            sx={{
+              borderRadius: '50px',
+              backgroundColor: 'black',
+              px: 3,
+              py: 1,
+              display: 'flex',
+              alignItems: 'center',
+              gap: 1,
+              '&:hover': {
+                backgroundColor: '#333',
+              },
+            }}
+          >
+            <Image 
+              src="/ios.png" 
+              alt="Apple Logo" 
+              width={20} 
+              height={20}
+            />
+            App Store
+          </Button>
+          <Button
+            variant="contained"
+            sx={{
+              borderRadius: '50px',
+              backgroundColor: 'black',
+              px: 3,
+              py: 1,
+              display: 'flex',
+              alignItems: 'center',
+              gap: 1,
+              '&:hover': {
+                backgroundColor: '#333',
+              },
+            }}
+          >
+            <Image 
+              src="/android.png" 
+              alt="Android Logo" 
+              width={20} 
+              height={20}
+            />
+            Google Play
+          </Button>
+        </Stack>
       </Stack>
     </Box>
   );
