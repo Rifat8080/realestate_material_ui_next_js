@@ -8,6 +8,7 @@ import MicIcon from '@mui/icons-material/Mic';
 import BuildIcon from '@mui/icons-material/Build';
 import DirectionsBoatIcon from '@mui/icons-material/DirectionsBoat'; // Add yacht icon
 import DirectionsCarIcon from '@mui/icons-material/DirectionsCar'; // Add car icon
+// /* eslint-disable react/no-unescaped-entities */
 
 const features = [
   "Properties",

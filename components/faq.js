@@ -10,6 +10,7 @@ import {
   useMediaQuery
 } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+/* eslint-disable react/no-unescaped-entities */
 
 const FAQ = () => {
   const theme = useTheme();
