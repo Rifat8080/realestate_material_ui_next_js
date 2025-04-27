@@ -70,33 +70,52 @@ const styles = {
 };
 
 // ===== REUSABLE COMPONENTS =====
+// Update the GradientButton component
 const GradientButton = ({ children, className = "", ...props }) => (
   <Button
     variant="contained"
     className={`rounded-md ${className}`}
-    sx={{ ...styles.blueGradient, ...styles.roundedBorder, ...props.sx }}
+    sx={{ 
+      ...styles.blueGradient, 
+      ...styles.roundedBorder, 
+      whiteSpace: 'nowrap',
+      minWidth: 'max-content',
+      ...props.sx 
+    }}
     {...props}
   >
     {children}
   </Button>
 );
 
+// Update the OutlinedGradientButton component
 const OutlinedGradientButton = ({ children, className = "", ...props }) => (
   <Button
     variant="outlined"
     className={`rounded-md ${className}`}
-    sx={{ ...styles.outlinedGradient, ...props.sx }}
+    sx={{ 
+      ...styles.outlinedGradient, 
+      whiteSpace: 'nowrap',
+      minWidth: 'max-content',
+      ...props.sx 
+    }}
     {...props}
   >
     {children}
   </Button>
 );
 
+// Update the YellowButton component
 const YellowButton = ({ children, className = "", ...props }) => (
   <Button
     variant="contained"
     className={`rounded-xl ${className}`}
-    sx={{ ...styles.yellowButton, ...props.sx }}
+    sx={{ 
+      ...styles.yellowButton, 
+      whiteSpace: 'nowrap',
+      minWidth: 'max-content',
+      ...props.sx 
+    }}
     {...props}
   >
     {children}
