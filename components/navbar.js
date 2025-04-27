@@ -56,7 +56,7 @@ export default function FloatingNavbar() {
             <ListItemButton 
               selected={tabValue === index}
               onClick={() => setTabValue(index)}
-              className="px-8"
+              className="px-8 "
             >
               <ListItemText primary={item} />
             </ListItemButton>
@@ -73,10 +73,18 @@ export default function FloatingNavbar() {
         </Button>
         <Button 
           variant="contained" 
-          color="primary"
           className="rounded-md w-full"
+          sx={{
+            background: 'linear-gradient(to right, #0F8CE9, #66B3FB)',
+            boxShadow: '0 4px 10px rgba(15, 140, 233, 0.3)',
+            '&:hover': {
+              background: 'linear-gradient(to right, #0F8CE9, #66B3FB)',
+              opacity: 0.9,
+              boxShadow: '0 6px 12px rgba(15, 140, 233, 0.4)',
+            }
+          }}
         >
-          Sign Up
+          Contact Us
         </Button>
       </div>
     </Box>
@@ -128,12 +136,20 @@ export default function FloatingNavbar() {
               Login
             </Button>
             <Button 
-              variant="contained" 
-              color="primary"
-              className="rounded-md"
-            >
-              Sign Up
-            </Button>
+          variant="contained" 
+          className="rounded-4xl w-full"
+          sx={{
+            background: 'linear-gradient(to right, #0F8CE9, #66B3FB)',
+            boxShadow: '0 4px 10px rgba(15, 140, 233, 0.3)',
+            '&:hover': {
+              background: 'linear-gradient(to right, #0F8CE9, #66B3FB)',
+              opacity: 0.9,
+              boxShadow: '0 6px 12px rgba(15, 140, 233, 0.4)',
+            }
+          }}
+        >
+          Contact Us
+        </Button>
           </div>
 
           {/* Mobile menu button - visible only on mobile */}
