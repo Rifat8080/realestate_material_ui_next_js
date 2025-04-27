@@ -1,5 +1,5 @@
 "use client";
-import FloatingNavbar from '@/components/button'; // Fix the import path
+import FloatingNavbar from '@/components/navbar'; // Fix the import path
 import { Box } from '@mui/material';
 
 export default function Page() {
